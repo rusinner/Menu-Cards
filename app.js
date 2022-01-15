@@ -118,7 +118,7 @@ const menu = [
           values.push(item.category);
         }
         return values;
-      },
+       },
       ["all"]
     );
     const categoryBtns = categories
@@ -126,7 +126,7 @@ const menu = [
         return `<button type="button" class="filter-btn" data-id=${category}>
             ${category}
           </button>`;
-      })
+      })  
       .join("");
   
     btnContainer.innerHTML = categoryBtns;
