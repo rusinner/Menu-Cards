@@ -81,6 +81,9 @@ const menu = [
     },
     
   ];
+//create logo
+
+
   // get parent element
   const sectionCenter = document.querySelector(".section-center");
   const btnContainer = document.querySelector(".btn-container");
@@ -88,8 +91,19 @@ const menu = [
   window.addEventListener("DOMContentLoaded", function () {
     diplayMenuItems(menu);
     displayMenuButtons();
+    displayLogo();
   });
   
+function displayLogo(){
+  const logo = document.createElement("div");
+  logo.innerText = "Your brand gets here!";
+  logo.id = "logo";
+  logo.style.position = "fixed";
+  logo.style.marginLeft = 5;
+  document.querySelector(".title").appendChild(logo);
+  document.querySelector("#logo").classList.add("logo");
+}
+
   function diplayMenuItems(menuItems) {
     let displayMenu = menuItems.map(function (item) {
       // console.log(item);
