@@ -79,6 +79,7 @@ const menu = [
       img: "././images/bison-steak.jpg",
       desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
     },
+    
   ];
   // get parent element
   const sectionCenter = document.querySelector(".section-center");
