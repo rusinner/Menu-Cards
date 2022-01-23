@@ -265,13 +265,13 @@ Menu
   }
 }
 
-.logo-list{
+.logo-container{
   padding: 1rem;
   background-color:  var(--clr-grey-10);
   height:10vh;
   width:100vw;
   display:inline-flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   
  
@@ -280,6 +280,7 @@ Menu
     background:black;
     border:transparent;
     transition:var(--transition);
+    align-self: center;
   }
   img{
     height:7vh;

@@ -92,17 +92,17 @@ logos = [
 
   {
     id : 2,
-    title: "",
+    title: "a",
     img: "././images/fb.png"},
 
     {
       id : 3,
-      title: "",
+      title: "b",
       img: "././images/insta.jpeg"},
 
       {
         id : 4,
-        title: "",
+        title: "c",
         img: "././images/pint.png"},
 
 ]
@@ -123,10 +123,10 @@ function displayLogo(logosList){
   let displayLogo= logosList.map(function(logoutsi){
     return `<article class = "logo-list">
     
-    <button onmouseover = "logoTransit()">
-    <img src = ${logoutsi.img} alt = ${logoutsi.title} name = ${logoutsi.title} class = "logo"/>
+    <button class = "buttonoutsi" onmouseover = "logoTransit()">
+    <img src = ${logoutsi.img} alt = ${logoutsi.title} class = "logo" />
      </button>
-     </article> `
+     </article> `;
 
   });
  
@@ -135,17 +135,18 @@ function displayLogo(logosList){
 }
 
  function logoTransit(){
-   if(!document.querySelector("button").classList.contains("hoveroutsi"))
-   document.querySelector("button").classList.add("hoveroutsi");
-   else{
-    document.querySelector("button").classList.remove("hoveroutsi");
 
-   }
-   
- }
-
-  function diplayMenuItems(menuItems) {
+  const logoList = document.querySelector(".buttonoutsi");
+     if(!logoList.classList.contains("hoveroutsi")){
+      logoList.classList.add("hoveroutsi");}
+     else{
+      logoList.classList.remove("hoveroutsi");
+  }
+    };
+ 
+  function diplayMenuItems(menuItems) { 
     let displayMenu = menuItems.map(function (item) {
+      
       // console.log(item);
   
       return `<article class="menu-item">
@@ -160,6 +161,7 @@ function displayLogo(logosList){
               </p>
             </div>
           </article>`;
+      
     });
     displayMenu = displayMenu.join("");
     // console.log(displayMenu);

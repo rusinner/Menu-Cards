@@ -305,7 +305,7 @@ Menu
   }
 }
 
-.logo-list {
+.logo-container {
   padding: 1rem;
   background-color: var(--clr-grey-10);
   height: 10vh;
@@ -313,22 +313,25 @@ Menu
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
-.logo-list button {
+.logo-container button {
   cursor: pointer;
   background: black;
   border: transparent;
   -webkit-transition: var(--transition);
   transition: var(--transition);
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
-.logo-list img {
+.logo-container img {
   height: 7vh;
 }
 
