@@ -82,27 +82,67 @@ const menu = [
     
   ];
 //create logo
+logos = [
+  {
+  id : 1,
+  title: "Your Brand Here",
+  img: "././images/logo.jpg",
+  },
+  
 
+  {
+    id : 2,
+    title: "",
+    img: "././images/fb.png"},
+
+    {
+      id : 3,
+      title: "",
+      img: "././images/insta.jpeg"},
+
+      {
+        id : 4,
+        title: "",
+        img: "././images/pint.png"},
+
+]
 
   // get parent element
+  const logoContainer = document.querySelector(".logo-container");
   const sectionCenter = document.querySelector(".section-center");
   const btnContainer = document.querySelector(".btn-container");
   // display all items when page loads
   window.addEventListener("DOMContentLoaded", function () {
     diplayMenuItems(menu);
     displayMenuButtons();
-    displayLogo();
+    displayLogo(logos);
   });
   
-function displayLogo(){
-  const logo = document.createElement("div");
-  logo.innerText = "Your brand gets here!";
-  logo.id = "logo";
-  logo.style.position = "fixed";
-  logo.style.marginLeft = 5;
-  document.querySelector(".title").appendChild(logo);
-  document.querySelector("#logo").classList.add("logo");
+function displayLogo(logosList){
+ 
+  let displayLogo= logosList.map(function(logoutsi){
+    return `<article class = "logo-list">
+    
+    <button onmouseover = "logoTransit()">
+    <img src = ${logoutsi.img} alt = ${logoutsi.title} name = ${logoutsi.title} class = "logo"/>
+     </button>
+     </article> `
+
+  });
+ 
+   displayLogo = displayLogo.join("");
+  logoContainer.innerHTML = displayLogo;
 }
+
+ function logoTransit(){
+   if(!document.querySelector("button").classList.contains("hoveroutsi"))
+   document.querySelector("button").classList.add("hoveroutsi");
+   else{
+    document.querySelector("button").classList.remove("hoveroutsi");
+
+   }
+   
+ }
 
   function diplayMenuItems(menuItems) {
     let displayMenu = menuItems.map(function (item) {

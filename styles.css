@@ -305,18 +305,35 @@ Menu
   }
 }
 
-.logo {
-  position: absolute;
-  margin-top: -6rem;
-  margin-left: 2rem;
-  width: 5rem;
-  height: 5rem;
-  border-radius: 50%;
-  border: var(--clr-gold) solid 1px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 0.5rem;
-  font-size-adjust: inherit;
+.logo-list {
+  padding: 1rem;
+  background-color: var(--clr-grey-10);
+  height: 10vh;
+  width: 100vw;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.logo-list button {
+  cursor: pointer;
+  background: black;
+  border: transparent;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.logo-list img {
+  height: 7vh;
+}
+
+.hoveroutsi {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 /*# sourceMappingURL=styles.css.map */

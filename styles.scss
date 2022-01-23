@@ -265,17 +265,31 @@ Menu
   }
 }
 
-.logo{
-  position:absolute;
-  margin-top: -6rem;
-  margin-left:2rem;
-  width:5rem;
-  height:5rem;
-  border-radius:50%;
-  border:var(--clr-gold) solid 1px;
-  display:flex;
-  font-size:0.5rem;
-  font-size-adjust: inherit;
+.logo-list{
+  padding: 1rem;
+  background-color:  var(--clr-grey-10);
+  height:10vh;
+  width:100vw;
+  display:inline-flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+ 
+  button{
+    cursor: pointer;
+    background:black;
+    border:transparent;
+    transition:var(--transition);
+  }
+  img{
+    height:7vh;
+    
+  }
   
   
+  
+}
+
+.hoveroutsi{
+  transform:rotate(360deg);
 }
