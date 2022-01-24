@@ -266,10 +266,11 @@ Menu
 }
 
 .logo-container{
+  margin-left:67vw;
   padding: 1rem;
   background-color:  var(--clr-grey-10);
   height:10vh;
-  width:100vw;
+  width:30vw;
   display:inline-flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -281,6 +282,7 @@ Menu
     border:transparent;
     transition:var(--transition);
     align-self: center;
+   
   }
   img{
     height:7vh;
@@ -292,5 +294,5 @@ Menu
 }
 
 .hoveroutsi{
-  transform:rotate(360deg);
+  transform:scale(1.2);
 }

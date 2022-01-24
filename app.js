@@ -83,25 +83,18 @@ const menu = [
   ];
 //create logo
 logos = [
-  {
-  id : 1,
-  title: "Your Brand Here",
-  img: "././images/logo.jpg",
-  },
-  
-
-  {
-    id : 2,
+ {
+    id : 1,
     title: "a",
     img: "././images/fb.png"},
 
     {
-      id : 3,
+      id : 2,
       title: "b",
       img: "././images/insta.jpeg"},
 
       {
-        id : 4,
+        id : 3,
         title: "c",
         img: "././images/pint.png"},
 
@@ -119,30 +112,35 @@ logos = [
   });
   
 function displayLogo(logosList){
- 
   let displayLogo= logosList.map(function(logoutsi){
-    return `<article class = "logo-list">
-    
-    <button class = "buttonoutsi" onmouseover = "logoTransit()">
+    return `<article  class = "logo-list">
+    <button id = "buttonoutsi" onmouseover = "logoTransit()" onmouseout = "logoReverse()">
     <img src = ${logoutsi.img} alt = ${logoutsi.title} class = "logo" />
      </button>
      </article> `;
-
+    
   });
  
    displayLogo = displayLogo.join("");
   logoContainer.innerHTML = displayLogo;
+}  
+function logoTransit(){
+  const logoList = document.getElementById("logo-container").querySelectorAll("button");
+  var i;
+for(i = 0; i<logoList.length;i++){
+     if(!logoList[i].classList.contains("hoveroutsi")){
+      logoList[i].classList.add("hoveroutsi");}
 }
-
- function logoTransit(){
-
-  const logoList = document.querySelector(".buttonoutsi");
-     if(!logoList.classList.contains("hoveroutsi")){
-      logoList.classList.add("hoveroutsi");}
-     else{
-      logoList.classList.remove("hoveroutsi");
+};
+function logoReverse(){
+  const logoList = document.getElementById("logo-container").querySelectorAll("button");
+  var i;
+  for(i = 0; i<logoList.length;i++){
+  if(logoList[i].classList.contains("hoveroutsi")){
+    logoList[i].classList.remove("hoveroutsi");
   }
-    };
+}
+}
  
   function diplayMenuItems(menuItems) { 
     let displayMenu = menuItems.map(function (item) {
@@ -188,7 +186,7 @@ function displayLogo(logosList){
   
     btnContainer.innerHTML = categoryBtns;
     const filterBtns = btnContainer.querySelectorAll(".filter-btn");
-    console.log(filterBtns);
+    //console.log(filterBtns);
   
     filterBtns.forEach(function (btn) {
       btn.addEventListener("click", function (e) {
