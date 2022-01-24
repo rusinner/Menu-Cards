@@ -242,6 +242,20 @@ Menu
   display: grid;
   gap: 1rem 2rem;
   max-width: 25rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.menu-item .order {
+  cursor: pointer;
+  background: transparent;
+  border-color: var(--clr-gold);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  border-radius: var(--radius);
+  color: var(--clr-gold);
 }
 
 .photo {
@@ -309,10 +323,10 @@ Menu
   transition: var(--transition);
   align-self: center;
 }
+.logo-container button :hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
 .logo-container img {
   height: 7vh;
-}
-
-.hoveroutsi {
-  transform: scale(1.2);
 }/*# sourceMappingURL=styles.css.map */

@@ -114,7 +114,7 @@ logos = [
 function displayLogo(logosList){
   let displayLogo= logosList.map(function(logoutsi){
     return `<article  class = "logo-list">
-    <button id = "buttonoutsi" onmouseover = "logoTransit()" onmouseout = "logoReverse()">
+    <button id = "buttonoutsi">
     <img src = ${logoutsi.img} alt = ${logoutsi.title} class = "logo" />
      </button>
      </article> `;
@@ -124,23 +124,8 @@ function displayLogo(logosList){
    displayLogo = displayLogo.join("");
   logoContainer.innerHTML = displayLogo;
 }  
-function logoTransit(){
-  const logoList = document.getElementById("logo-container").querySelectorAll("button");
-  var i;
-for(i = 0; i<logoList.length;i++){
-     if(!logoList[i].classList.contains("hoveroutsi")){
-      logoList[i].classList.add("hoveroutsi");}
-}
-};
-function logoReverse(){
-  const logoList = document.getElementById("logo-container").querySelectorAll("button");
-  var i;
-  for(i = 0; i<logoList.length;i++){
-  if(logoList[i].classList.contains("hoveroutsi")){
-    logoList[i].classList.remove("hoveroutsi");
-  }
-}
-}
+
+
  
   function diplayMenuItems(menuItems) { 
     let displayMenu = menuItems.map(function (item) {
@@ -157,7 +142,9 @@ function logoReverse(){
               <p class="item-text">
                 ${item.desc}
               </p>
+              <button class = "order">Order</button>
             </div>
+            
           </article>`;
       
     });

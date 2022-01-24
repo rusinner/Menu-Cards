@@ -222,7 +222,22 @@ Menu
   display: grid;
   gap: 1rem 2rem;
   max-width: 25rem;
-}
+  .order{
+    cursor: pointer;
+    background: transparent;
+  border-color: var(--clr-gold);
+  padding-left:1rem;
+  padding-right: 1rem;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  border-radius: var(--radius);
+  color: var(--clr-gold);
+  }
+  cursor: pointer;
+  transition: var(--transition);
+  }
+
 .photo {
   object-fit: cover;
   height: 200px;
@@ -282,17 +297,14 @@ Menu
     border:transparent;
     transition:var(--transition);
     align-self: center;
-   
-  }
+    :hover{
+      transform: scale(1.2);
+      opacity:0.8;
+    }
+    }
   img{
     height:7vh;
-    
-  }
+    }
   
-  
-  
-}
+ }
 
-.hoveroutsi{
-  transform:scale(1.2);
-}
