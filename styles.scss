@@ -233,11 +233,10 @@ Menu
   letter-spacing: 1px;
   border-radius: var(--radius);
   color: var(--clr-gold);
-  }
   cursor: pointer;
   transition: var(--transition);
   }
-
+}
 .photo {
   object-fit: cover;
   height: 200px;
