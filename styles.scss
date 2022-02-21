@@ -233,13 +233,16 @@ Menu
   letter-spacing: 1px;
   border-radius: var(--radius);
   color: var(--clr-gold);
+<<<<<<< HEAD
   &:hover{background-color:var(--clr-gold);
   color:#222}
   }
+=======
+>>>>>>> 7a366fca0233a3ea2a3d15582ba60e6428822852
   cursor: pointer;
   transition: var(--transition);
   }
-
+}
 .photo {
   object-fit: cover;
   height: 200px;
